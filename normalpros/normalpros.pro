@@ -11,10 +11,12 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = normalpros
 TEMPLATE = app
 
-
+CONFIG += c++11
 SOURCES += main.cpp\
-        widget.cpp
+        widget.cpp \
+    showchanges.cpp
 
-HEADERS  += widget.h
+HEADERS  += widget.h \
+    showchanges.h
 
 FORMS    += widget.ui
