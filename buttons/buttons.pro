@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-02-22T13:31:53
+# Project created by QtCreator 2017-02-22T16:22:00
 #
 #-------------------------------------------------
 
@@ -8,16 +8,13 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = QtMenu
+TARGET = buttons
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    dialog.cpp
+        dialog.cpp
 
-HEADERS  += mainwindow.h \
-    dialog.h
+HEADERS  += dialog.h
 
-FORMS    += mainwindow.ui \
-    dialog.ui
+FORMS    += dialog.ui

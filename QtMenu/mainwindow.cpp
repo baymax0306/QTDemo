@@ -43,7 +43,28 @@ void MainWindow::test2()
     QMessageBox::information(this, tr("test"), tr("test2"));
 }
 
+#include "dialog.h"
+
 void MainWindow::hello()
 {
-    QMessageBox::information(this, tr("test"), tr("hello"));
+    //QMessageBox::information(this, tr("test"), tr("hello"));
+    Dialog dlg;
+    dlg.exec();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

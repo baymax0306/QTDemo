@@ -79,7 +79,7 @@
   </action>
   <action name="actionHello">
    <property name="text">
-    <string>hello</string>
+    <string>Dialog</string>
    </property>
   </action>
  </widget>
