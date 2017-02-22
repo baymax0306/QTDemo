@@ -1,7 +1,8 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QString>
-
+#include <QDebug>
+#include <QKeyEvent>
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -286,9 +287,13 @@ void Widget::on_equalButtom_clicked()
         break;
     default:break;
     }
-    if(first!=-999){
+    if(first!=-999)
+    {
         first=-999;
-        ui->displayLabel->setText(QString::number(display));
+        //QString QString::​number(double n, char format = 'g', int precision = 6)
+        //format: 'g'表示科学计数法， 'f'表示非科学计数法
+        //precision: 表示小数位数
+        ui->displayLabel->setText(QString::number(display, 'f'));
     }
 
 }
@@ -496,5 +501,101 @@ void Widget::on_equalButtom_released()
 {
 ui->equalButtom->setStyleSheet("border-image: url(:/res/d4btn-a.gif);color: rgb(255, 255, 255);font: 13pt \"微软雅黑\";");
 }
+
+void Widget::keyPressEvent(QKeyEvent* event)
+{
+  //  qDebug() << "keyPressEvent";
+
+    switch (event->key())
+    {
+    case Qt::Key_0:
+        on_n0Buttom_clicked();
+        break;
+
+    case Qt::Key_1:
+        on_n1Buttom_clicked();
+        break;
+
+    case Qt::Key_2:
+        on_n2Buttom_clicked();
+        break;
+    case Qt::Key_3:
+        on_n3Buttom_clicked();
+        break;
+
+    case Qt::Key_4:
+        on_n4Buttom_clicked();
+        break;
+
+    case Qt::Key_5:
+        on_n5Buttom_clicked();
+        break;
+
+    case Qt::Key_6:
+        on_n6Buttom_clicked();
+        break;
+
+    case Qt::Key_7:
+        on_n7Buttom_clicked();
+        break;
+
+    case Qt::Key_8:
+        on_n8Buttom_clicked();
+        break;
+
+    case Qt::Key_9:
+        on_n9Buttom_clicked();
+        break;
+
+    case Qt::Key_Plus:
+        on_addButtom_clicked();
+        break;
+
+    case Qt::Key_Minus:
+        on_subButtom_clicked();
+        break;
+
+    case Qt::Key_multiply:
+        on_multiButtom_clicked();
+        break;
+
+    case Qt::Key_division:
+        on_multiButtom_clicked();
+        break;
+
+    case Qt::Key_Return:
+    case Qt::Key_Equal:
+        on_equalButtom_clicked();
+        break;
+
+    case Qt::Key_Backspace:
+        on_delButtom_clicked();
+        break;
+
+    case Qt::Key_Escape:
+        on_cleanButtom_clicked();
+        break;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

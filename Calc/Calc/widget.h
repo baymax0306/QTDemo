@@ -137,6 +137,10 @@ private:
     double first;
     double second;
     int symbol;
+
+    //重载事件
+protected:
+    virtual void keyPressEvent(QKeyEvent* event);
 };
 
 #endif // WIDGET_H
