@@ -267,7 +267,8 @@ void Widget::on_equalButtom_clicked()
     QString newNum=ui->displayLabel->text();
     second=newNum.toDouble();
     double display;
-    switch (symbol) {
+    switch (symbol)
+    {
     case 0:
         display=first+second;
         break;
