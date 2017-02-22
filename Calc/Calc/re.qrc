@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/siverbg.png</file>
+        <file>res/d4btn.gif</file>
+        <file>res/d2btn.gif</file>
+        <file>res/d3btn.gif</file>
+        <file>res/d3btn-a.gif</file>
+        <file>res/d2btn-a.gif</file>
+        <file>res/d4btn-a.gif</file>
+        <file>res/d0btn-a.gif</file>
+        <file>res/d1btn-a.gif</file>
+        <file>res/d3btn-b.gif</file>
+        <file>res/d4btn-b.gif</file>
+        <file>res/d0btn-b.gif</file>
+        <file>res/d2btn-b.gif</file>
+        <file>res/jsq.jpg</file>
+    </qresource>
+</RCC>
