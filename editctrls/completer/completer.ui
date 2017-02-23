@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>completerClass</class>
+ <widget class="QWidget" name="completerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>completer</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>80</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>&amp;DayOfWeek</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit_dayofweek</cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>180</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>&amp;Year</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit_year</cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>280</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>钟(&amp;Z)</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit_name</cstring>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>0</y>
+     <width>152</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="lineEdit_dayofweek">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_year">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_name">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="completer.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>lineEdit_dayofweek</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>completerClass</receiver>
+   <slot>onDayofWeekTextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>394</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_year</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>completerClass</receiver>
+   <slot>onYearTextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>completerClass</receiver>
+   <slot>onNameTextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>466</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onDayofWeekTextChanged(QString)</slot>
+  <slot>onYearTextChanged(QString)</slot>
+  <slot>onNameTextChanged(QString)</slot>
+ </slots>
+</ui>
